@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/105386705/FutureSports-APRC/static/css/main.533acf09.css",
-    "main.js": "/105386705/FutureSports-APRC/static/js/main.ca767831.js",
-    "static/js/453.ed3810f9.chunk.js": "/105386705/FutureSports-APRC/static/js/453.ed3810f9.chunk.js",
-    "static/media/Video-1.mp4": "/105386705/FutureSports-APRC/static/media/Video-1.1ffa077e5c4675a82b1f.mp4",
-    "static/media/Image-2.jpg": "/105386705/FutureSports-APRC/static/media/Image-2.a0d63a6f6c198441273e.jpg",
-    "static/media/Image-1.jpg": "/105386705/FutureSports-APRC/static/media/Image-1.28b437d54b601cb72392.jpg",
-    "static/media/Image-3.jpg": "/105386705/FutureSports-APRC/static/media/Image-3.70b9996283050ba12456.jpg",
-    "static/media/Logo.png": "/105386705/FutureSports-APRC/static/media/Logo.aea122ecc87a8d8a15a1.png",
-    "index.html": "/105386705/FutureSports-APRC/index.html",
-    "main.533acf09.css.map": "/105386705/FutureSports-APRC/static/css/main.533acf09.css.map",
-    "main.ca767831.js.map": "/105386705/FutureSports-APRC/static/js/main.ca767831.js.map",
-    "453.ed3810f9.chunk.js.map": "/105386705/FutureSports-APRC/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/FutureSports-APRC/static/css/main.533acf09.css",
+    "main.js": "/FutureSports-APRC/static/js/main.958f1bea.js",
+    "static/js/453.ed3810f9.chunk.js": "/FutureSports-APRC/static/js/453.ed3810f9.chunk.js",
+    "static/media/Video-1.mp4": "/FutureSports-APRC/static/media/Video-1.1ffa077e5c4675a82b1f.mp4",
+    "static/media/Image-2.jpg": "/FutureSports-APRC/static/media/Image-2.a0d63a6f6c198441273e.jpg",
+    "static/media/Image-1.jpg": "/FutureSports-APRC/static/media/Image-1.28b437d54b601cb72392.jpg",
+    "static/media/Image-3.jpg": "/FutureSports-APRC/static/media/Image-3.70b9996283050ba12456.jpg",
+    "static/media/Logo.png": "/FutureSports-APRC/static/media/Logo.aea122ecc87a8d8a15a1.png",
+    "index.html": "/FutureSports-APRC/index.html",
+    "main.533acf09.css.map": "/FutureSports-APRC/static/css/main.533acf09.css.map",
+    "main.958f1bea.js.map": "/FutureSports-APRC/static/js/main.958f1bea.js.map",
+    "453.ed3810f9.chunk.js.map": "/FutureSports-APRC/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.533acf09.css",
-    "static/js/main.ca767831.js"
+    "static/js/main.958f1bea.js"
   ]
 }
