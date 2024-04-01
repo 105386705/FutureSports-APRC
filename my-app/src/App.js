@@ -13,33 +13,30 @@ import Contact from './components/MainContent/Contact';
 import './App.css';
 
 const searchIndex = {
-  "home": ["welcome", "introduction", "start"],
-  "training": ["workout", "exercise", "fitness"],
-  "events": ["calendar", "upcoming", "schedule"],
-  "media": ["gallery", "photos", "videos"],
-  "contact": ["support", "help", "customer service"]
+  "home": ["welcome", "introduction", "start", "home"],
+  "training": ["workout", "exercise", "fitness", "training"],
+  "events": ["calendar", "upcoming", "schedule", "events"],
+  "media": ["gallery", "photos", "videos", "images", "media"],
+  "contact": ["support", "help", "customer service", "contact"]
 };
+
 const App = () => {
   const [currentSection, setCurrentSection] = useState('home');
+
   const handleNavigation = (section) => {
     setCurrentSection(section);
   };
+
   const handleSearch = (searchTerm) => {
-    let bestMatch = "";
-    let highestMatchCount = 0;
     for (const [section, keywords] of Object.entries(searchIndex)) {
-      let matchCount = keywords.filter(keyword => searchTerm.toLowerCase().includes(keyword)).length;
-      if (matchCount > highestMatchCount) {
-        highestMatchCount = matchCount;
-        bestMatch = section;
+      if (keywords.some(keyword => keyword.includes(searchTerm.toLowerCase()))) {
+        handleNavigation(section);
+        return true;
       }
     }
-    if (bestMatch) {
-      handleNavigation(bestMatch);
-    } else {
-      console.log("No match found.");
-    }
+    return false;
   };
+
   const renderContent = () => {
     switch (currentSection) {
       case 'home': return <Home />;
@@ -50,6 +47,7 @@ const App = () => {
       default: return <Home />;
     }
   };
+
   return (
     <div className="grid-container">
       <Logo />
@@ -63,4 +61,5 @@ const App = () => {
     </div>
   );
 };
+
 export default App;

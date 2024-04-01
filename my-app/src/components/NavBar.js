@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const NavBar = ({ onNavigate }) => {
+const NavBar = ({ onNavigate, onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchError, setSearchError] = useState(false);
+
   const handleNavigation = (event, section) => {
     event.preventDefault();
     onNavigate(section);
+  };
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+    setSearchError(false);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!searchTerm) {
+      return;
+    }
+
+    const result = onSearch(searchTerm);
+    if (!result) {
+      setSearchError(true);
+    }
   };
 
   return (
@@ -18,8 +38,8 @@ const NavBar = ({ onNavigate }) => {
         </ul>
       </div>
       <div className="right-nav">
-        <form className="search-form" onSubmit={(event) => event.preventDefault()}>
-          <input type="search" placeholder="Search..." />
+        <form className="search-form" onSubmit={handleSubmit}>
+          <input type="search" placeholder="Search..." value={searchError ? 'No match found' : searchTerm} onChange={handleSearchChange} />
           <button type="submit">Search</button>
         </form>
       </div>
